@@ -19,6 +19,5 @@ FILE="/data/users/asteiner/assembly_annotation_course/Nemrut-1/ERR11437351.fastq
 mkdir -p $OUTDIR
 
 
-apptainer exec --bind /data $CONTAINER hifiasm -o ERR11437351.asm -t 16 $FILE
+apptainer exec --bind /data $CONTAINER hifiasm -o $OUTDIR/ERR11437351.asm -t 16 $FILE
 
-awk '/^S/{print ">"$2;print $3}' ERR11437351.asm.bp.p_ctg.gfa > ERR11437351.asm.bp.p_ctg.fa
