@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --cpus-per-task=16
-#SBATCH --mem=64G
-#SBATCH --time=1-00:00:00
+#SBATCH --mem=120G
+#SBATCH --time=2-00:00:00
 #SBATCH --job-name=LJA_assembly
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end

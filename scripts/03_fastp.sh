@@ -15,7 +15,7 @@ CONTAINER="/containers/apptainer/fastp_0.24.1.sif"
 OUTDIR="$WORKDIR/read_QC/fastp_results"
 
 # Run fastp on RNAseq_Sha
-apptainer exec --bind /data $CONTAINER fastp -i $WORKDIR/RNAseq_Sha/ERR754081_1.fastq.gz -I $WORKDIR/RNAseq_Sha/ERR754081_2.fastq.gz -o $OUTDIR/ERR754081_1.fastp -O $OUTDIR/ERR754081_2.fastp
+apptainer exec --bind /data $CONTAINER fastp -i $WORKDIR/RNAseq_Sha/ERR754081_1.fastq.gz -I $WORKDIR/RNAseq_Sha/ERR754081_2.fastq.gz -o $OUTDIR/ERR754081_1.fastp -O $OUTDIR/ERR754081_2.fastp -j $OUTDIR/fastp_RNA.json -h $OUTDIR/fastp_RNA.html
 
 # Run fastp on Nemrut-1 without quality filtering (-Q)
-apptainer exec --bind /data $CONTAINER fastp -i $WORKDIR/Nemrut-1/ERR11437351.fastq.gz -o $OUTDIR/ERR11437351.fastp -Q 
+apptainer exec --bind /data $CONTAINER fastp -i $WORKDIR/Nemrut-1/ERR11437351.fastq.gz -o $OUTDIR/ERR11437351.fastp -Q -j $OUTDIR/fastp_DNA.json -h $OUTDIR/fastp_DNA.html
