@@ -6,8 +6,8 @@
 #SBATCH --job-name=awk_gfa_to_fa
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/hifiasm/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/hifiasm/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/hifiasm/output_gfa_to_fa_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/hifiasm/error_gfa_to_fa_%j.e
 #SBATCH --partition=pibu_el8
 
 WORKDIR="/data/users/asteiner/assembly_annotation_course"

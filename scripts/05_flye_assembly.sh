@@ -6,8 +6,8 @@
 #SBATCH --job-name=flye_assembly
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/flye/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/flye/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/flye/output_flye_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/flye/error_flye_%j.e
 #SBATCH --partition=pibu_el8
 
 WORKDIR="/data/users/asteiner/assembly_annotation_course"

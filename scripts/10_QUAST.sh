@@ -26,15 +26,8 @@ mkdir -p $OUTDIR/ref
 
 
 
-#apptainer exec --bind /data $CONTAINER quast.py -o $OUTDIR/flye -r $REF_GENOME -g gene:$FEATURE_FILE -t 4 -e --large -l flye_with_reference $FLYE_FILE
-
-#apptainer exec --bind /data $CONTAINER quast.py -o $OUTDIR/flye --est-ref-size 125000000 -g gene:$FEATURE_FILE -t 4 -e --large -l hifiasm_no_reference $FLYE_FILE 
-
-#apptainer exec --bind /data $CONTAINER quast.py -o $OUTDIR/hifiasm -r $REF_GENOME -g gene:$FEATURE_FILE -t 4 -e --large -l hifiasm_with_reference $HIFIASM_FILE
-
-#apptainer exec --bind /data $CONTAINER quast.py -o $OUTDIR/hifiasm --est-ref-size 125000000 -g gene:$FEATURE_FILE -t 4 -e --large -l hifiasm_no_reference $HIFIASM_FILE 
 # === Run QUAST without reference ===
-#apptainer exec --bind /data $CONTAINER quast.py $FLYE_FILE $HIFIASM_FILE --eukaryote --threads 4 --est-ref-size 125000000 -g gene:$FEATURE_FILE --labels Flye,Hifiasm -o $OUTDIR/no_ref
+apptainer exec --bind /data $CONTAINER quast.py $FLYE_FILE $HIFIASM_FILE --eukaryote --threads 4 --est-ref-size 125000000 -g gene:$FEATURE_FILE --labels Flye,Hifiasm -o $OUTDIR/no_ref
 
 # === Run QUAST with reference ===
 apptainer exec --bind /data $CONTAINER quast.py $FLYE_FILE $HIFIASM_FILE --eukaryote --threads 4 --est-ref-size 125000000 -g gene:$FEATURE_FILE --labels Flye,Hifiasm -R $REF_GENOME --features $FEATURE_FILE -o $OUTDIR/ref

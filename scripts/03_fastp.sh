@@ -6,8 +6,8 @@
 #SBATCH --job-name=fastp
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/read_QC/fastp_results/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/read_QC/fastp_results/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/read_QC/fastp_results/output_fastp_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/read_QC/fastp_results/error_fastp_%j.e
 #SBATCH --partition=pibu_el8
 
 WORKDIR="/data/users/asteiner/assembly_annotation_course" 

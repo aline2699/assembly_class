@@ -6,8 +6,8 @@
 #SBATCH --job-name=kmer_counting
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/read_QC/kmer_counting/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/read_QC/kmer_counting/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/read_QC/kmer_counting/output_kmer_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/read_QC/kmer_counting/error_kmer_%j.e
 #SBATCH --partition=pibu_el8
 
 WORKDIR="/data/users/asteiner/assembly_annotation_course"

@@ -6,8 +6,8 @@
 #SBATCH --job-name=merqury
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/merqury/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/merqury/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/merqury/output_merqury_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/merqury/error_merqury_%j.e
 #SBATCH --partition=pibu_el8
 
 
@@ -24,7 +24,7 @@ export MERQURY="/usr/local/share/merqury"
 
 #apptainer exec --bind /data $CONTAINER sh $MERQURY/best_k.sh 125000000 0.001
 
-#apptainer exec --bind /data $CONTAINER meryl k=$k count $WORKDIR/Nemrut-1/*.fastq.gz output $OUTDIR/$genome.meryl
+apptainer exec --bind /data $CONTAINER meryl k=$k count $WORKDIR/Nemrut-1/*.fastq.gz output $OUTDIR/$genome.meryl
 
 apptainer exec --bind /data $CONTAINER merqury.sh $OUTDIR/.meryl $FLYE_FILE $WORKDIR/assembly_evaluation/merqury/flye/flye
 

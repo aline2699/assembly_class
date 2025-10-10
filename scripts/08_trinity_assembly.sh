@@ -6,8 +6,8 @@
 #SBATCH --job-name=Trinity_assembly
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/Trinity/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/Trinity/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly/Trinity/output_trinity_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly/Trinity/error_trinity_%j.e
 #SBATCH --partition=pibu_el8
 
 WORKDIR="/data/users/asteiner/assembly_annotation_course"

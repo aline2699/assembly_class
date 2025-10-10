@@ -6,8 +6,8 @@
 #SBATCH --job-name=nucmer
 #SBATCH --mail-user=aline.steiner@students.unibe.ch
 #SBATCH --mail-type=end
-#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/nucmer/output_fastqc_%j.o
-#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/nucmer/error_fastqc_%j.e
+#SBATCH --output=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/nucmer/output_nucmer_%j.o
+#SBATCH --error=/data/users/asteiner/assembly_annotation_course/assembly_evaluation/nucmer/error_nucmer_%j.e
 #SBATCH --partition=pibu_el8
 
 
